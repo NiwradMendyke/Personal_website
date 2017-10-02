@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Jumping over Cuccos!</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<script type="text/javascript" src="js/phaser.min.js"></script>
+		<script type="text/javascript" src="js/cuccoRun.js"></script>
+		<script type="text/javascript" src="js/scoresIO.js"></script>
+		<style type="text/css">
+			body {
+				margin: 0;
+			}
+			#user_input {
+				margin-left: 20px;
+			}
+			#player_name {
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+			#highScores {
+				margin: 4px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="modal fade" id="startModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content" style = "color: black">
+					<div class="modal-header">
+						<h2 class="modal-title" id="myModalLabel">Welcome to Cucco Run</h2>
+					</div>
+					<div class="modal-body" id="newReviewBody">
+						<div class="row" id="description">
+							<div class="col-sm-12">
+								<h5>
+									The rules are simple.</br></br>Press the spacebar to jump and avoid Cuccos and press 'P' to pause.
+								</h5>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-default" data-dismiss="modal" aria-label="Close" type="button" id="startGame">Start Game</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="restartModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content" style = "color: black">
+					<div class="modal-header">
+						<h2 class="modal-title" id="myModalLabel"></h2>
+					</div>
+					<div class="row">
+						<div class="col-sm-6" id="user_input">
+							<h5>
+								Enter your name to save your score:
+							</h5>
+							<input type="text" class="form-control" id="player_name">
+							<button class="btn btn-default" type="button" id="submitScore">Submit</button>
+						</div>
+					</div>
+					<div class="modal-body" id="highScores">
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-default" data-dismiss="modal" aria-label="Close" type="button" id="restartGame">Play Again</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

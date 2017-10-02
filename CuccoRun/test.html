@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Jumping Over Cuccos</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>
+   $(document).ready(function() {
+      $('#addReview').click(function(){
+         $('#myModal').modal('show')
+      })
+
+      $('#cancelReview').click(function(){
+         $('#myModal').modal('hide')
+      })
+
+      $('#myModal').on('show.bs.modal', function () {
+         console.log("modal shown")
+      })
+      $('#myModal').on('hidden.bs.modal', function () {
+         console.log("modal hidden")
+      })
+   })
+   </script>
+</head>
+<body>
+	<div class="container-fluid" id="overviewPanel">
+
+		<div class="row">
+			<!--<div class="col-sm-1" id="fillerpanel"></div>-->
+
+			<div class="col-sm-1" id="imagePanel">
+				<!-- end of the carousel part -->
+				<div class="row">
+					<div class="col-sm-2"><button class="btn btn-default buttons" type="button" id="addReview">Add Review</button></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content" style = "color: black">
+				<div class="modal-header">
+					<h2 class="modal-title" id="myModalLabel">New Review</h2>
+				</div>
+				<div class="modal-body" id="newReviewBody">
+					<div class="row" id="submitButtons">
+						<div class="col-sm-2"><button class="btn btn-default" data-dismiss="modal" aria-label="Close" type="button" id="cancelReview">CANCEL</button></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+</html>

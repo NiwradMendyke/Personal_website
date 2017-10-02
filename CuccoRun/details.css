@@ -1,0 +1,286 @@
+/* navigation bar */
+.navbar {
+    background-color: black;
+    /*background-color: #B7E0F1;*/
+    letter-spacing: 1px;
+    padding-top: 20px;
+    height: 100px;
+    text-transform: uppercase;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.navbar-custom .nav li a {
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out;
+}
+
+.navbar-custom a {
+    color: white;
+}
+
+body {
+	/*background-color: #B7E0F1;*/
+	/* background-color: #c7e5fc; */
+  font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: black;
+  /*background-color: B7E0F1;*/
+  background: url(bathroom_images/detaiL_background.jpg) no-repeat bottom center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+.canshow{
+/* 	background-color:
+ */	opacity: 1;
+}
+  #thumbsUp{
+    color: black;
+    font-size: 75px;
+  }
+
+.panel {
+	top: 200px;
+	margin: 70px;
+	margin-top: 65px;
+}
+
+.buttons{
+	margin-top: 50px;
+}
+
+#hide_show {
+	width: 100px;
+	visibility: hidden;
+}
+
+#dropdown {
+	visibility: hidden;
+}
+
+#name {
+	font-size: 30px;
+	color: blue;
+	font-weight: 500px;
+}
+
+#searchStuff {
+	text-align: center;
+
+}
+
+#searchbar {
+	width: 400px;
+	visibility: hidden;
+}
+
+#authenticate {
+	margin-right: 30px;
+}
+
+.btn-default {
+    border: 1px solid #42DCA3;
+    color: #42DCA3;
+    background-color: transparent;
+}
+
+.btn {
+	text-transform: uppercase;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid;
+    border-radius: 0px;
+}
+
+
+
+/* top panel with summary info */
+#overviewPanel {
+	margin-top: 120px;
+	margin-left: 200px;
+	/*border-style: solid;
+	border-color: red;*/
+}
+
+
+#timeopen {
+	padding-bottom: 20px;
+}
+
+#detailpanel {
+	width: 350px;
+	/*border-style: solid;
+	border-color: blue;*/
+}
+
+#imagePanel {
+	width: 750px;
+	margin-left: 0px;
+	margin-top: 70px;
+	vertical-align: middle;
+	/*border-style: solid;
+	border-color: green;*/
+}
+
+.row {
+	margin-bottom: 10px;
+}
+
+.col {
+	padding-right: 0px;
+}
+
+#rating {
+	font-size: 16px;
+	text-align: right;
+}
+
+
+/* table of reviews */
+#reviewTable {
+	margin-top: 0px;
+	margin-left: 70px;
+	/*border-style: solid;*/
+}
+
+#line {
+	border-color: black;
+	margin-bottom: 0px;
+}
+
+#reviewStats {
+	margin-left: 60px;
+	margin-bottom: 10px;
+}
+
+#timestamp {
+	margin-top: 14px;
+}
+
+#thumbs {
+	padding-top: 5px;
+}
+
+.likebutton {
+	border-style: none;
+	margin-left: 5px;
+}
+
+.value {
+	font-size: 15px;
+	margin-top: 10px;
+	text-align: left;
+	margin-left: -30px;
+}
+
+.dislikebutton {
+	padding-top: 10px;
+	border-style: none;
+	margin-left: 5px;
+}
+
+#reviewText {
+	margin-left: 75px;
+	margin-bottom: 0px
+}
+
+#seeMore {
+	margin-left: 90px;
+}
+
+.collapse {
+	margin-top: 12px;
+	margin-left: 150px;
+	width: 700px;
+	margin-bottom: -20px;
+}
+
+
+/* styling the add review modal */
+.modal-backdrop {
+/* 	background-color: #0e0c2e;
+
+ */
+ }
+
+#modal_rating {
+	font-size: 16px;
+	text-align: right;
+}
+
+#newReviewBody {
+	/*padding-left: 100px;*/
+}
+
+#newReviewField {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#submitButtons {
+	margin-top: 10px;
+}
+
+
+
+/* for the carousel part*/
+.multi-item-carousel{
+  .carousel-inner{
+    > .item{
+      transition: 500ms ease-in-out left;
+    }
+    .active{
+      &.left{
+        left:-33%;
+      }
+      &.right{
+        left:33%;
+      }
+    }
+    .next{
+      left: 33%;
+    }
+    .prev{
+      left: -33%;
+    }
+    @media all and (transform-3d), (-webkit-transform-3d) {
+      > .item{
+        // use your favourite prefixer here
+        transition: 500ms ease-in-out all;
+        backface-visibility: visible;
+        transform: none!important;
+      }
+    }
+  }
+  .carouse-control{
+    &.left, &.right{
+      background-image: none;
+    }
+  }
+}
+
+#images{
+  padding-top: 50px;
+  width:800px;
+}
+
+
+/* end of the carousel part*/
